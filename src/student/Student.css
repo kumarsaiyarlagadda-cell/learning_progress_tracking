@@ -1,0 +1,113 @@
+/* ===== STUDENT THEME ===== */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+}
+
+/* Page Wrapper */
+.page {
+  width: 90%;
+  margin: 40px auto;
+}
+
+/* Page Titles */
+.page h1 {
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+/* Grid Layout */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Card Style */
+.card {
+  flex: 1;
+  min-width: 260px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* Buttons */
+.btn {
+  margin-top: 12px;
+  padding: 8px 16px;
+  background: white;
+  color: #1e3c72;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #f0f0f0;
+  transform: scale(1.05);
+}
+
+/* Form Inputs */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+/* Labels */
+label {
+  font-weight: 500;
+  margin-top: 10px;
+  display: block;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  background: rgba(255,255,255,0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progress-fill {
+  height: 25px;
+  background: #00ffcc;
+  text-align: center;
+  line-height: 25px;
+  font-weight: bold;
+  transition: width 0.5s ease;
+}
+
+/* Test Score Display */
+.score {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #00ffcc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card-grid {
+    flex-direction: column;
+  }
+}
