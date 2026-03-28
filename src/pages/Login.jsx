@@ -16,7 +16,7 @@ export default function Login() {
     if (role === "admin" && username === "admin" && password === "admin123") {
       localStorage.setItem(
         "loggedInUser",
-        JSON.stringify({ username: "admin", role: "admin" })
+        JSON.stringify({ username: "admin", role: "123" })
       );
       navigate("/admin");
       return;
