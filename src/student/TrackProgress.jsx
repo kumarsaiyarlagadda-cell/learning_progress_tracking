@@ -1,14 +1,13 @@
 import NavBar from "../components/NavBar";
 import "../common/Main.css";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 export default function TrackProgress() {
-  const [progress, setProgress] = useState({});
+  const [scores, setScores] = useState({});
 
   useEffect(() => {
-    const stored = JSON.parse(localStorage.getItem("progress")) || {};
-    setProgress(stored);
+    const stored = JSON.parse(localStorage.getItem("scores")) || {};
+    setScores(stored);
   }, []);
 
   return (
@@ -19,21 +18,17 @@ export default function TrackProgress() {
         <h1>📊 Your Progress</h1>
 
         <div className="card-grid">
-          {Object.keys(progress).length === 0 ? (
-            <p>No progress updated yet.</p>
+          {Object.keys(scores).length === 0 ? (
+            <p>No test taken yet</p>
           ) : (
-            Object.keys(progress).map((course) => (
-              <div className="card" key={course}>
-                <h3>{course}</h3>
-                <p>Completion: {progress[course]}%</p>
+            Object.keys(scores).map((mod) => (
+              <div className="card" key={mod}>
+                <h3>{mod}</h3>
+                <p>Score: {scores[mod]}%</p>
               </div>
             ))
           )}
         </div>
-
-        <Link to="/student/update">
-          <button className="btn">Update Progress</button>
-        </Link>
       </div>
     </>
   );

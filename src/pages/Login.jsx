@@ -14,6 +14,20 @@ export default function Login() {
       return;
     }
 
+    // ✅ Default Admin Credentials
+    if (
+      role === "admin" &&
+      username === "admin" &&
+      password === "admin"
+    ) {
+      localStorage.setItem(
+        "loggedInUser",
+        JSON.stringify({ username, role })
+      );
+      navigate("/admin");
+      return;
+    }
+
     const users = JSON.parse(localStorage.getItem("users")) || [];
 
     const validUser = users.find(
@@ -24,6 +38,15 @@ export default function Login() {
     );
 
     if (validUser) {
+      // ✅ Save logged-in user
+      localStorage.setItem(
+        "loggedInUser",
+        JSON.stringify({
+          username: validUser.username,
+          role: validUser.role,
+        })
+      );
+
       navigate(`/${role}`);
     } else {
       alert("Invalid Credentials");

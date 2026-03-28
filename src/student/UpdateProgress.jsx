@@ -27,7 +27,7 @@ export default function UpdateProgress() {
       <NavBar role="student" />
 
       <div className="page">
-        <h1>✏ Update Progress</h1>
+        <h1> Update Progress</h1>
 
         <div className="card">
           <label>Course Name</label>

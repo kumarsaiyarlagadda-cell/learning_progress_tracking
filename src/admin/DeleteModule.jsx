@@ -21,7 +21,7 @@ export default function DeleteModule() {
       <NavBar role="admin" />
 
       <div className="page">
-        <h1>Delete Module</h1>
+        <h1> Delete Module</h1>
 
         <div className="card-grid">
           {modules.map((mod) => (

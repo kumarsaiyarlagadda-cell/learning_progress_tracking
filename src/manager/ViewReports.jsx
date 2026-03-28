@@ -1,16 +1,20 @@
 import NavBar from "../components/NavBar";
 import "./Manager.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function ViewReports() {
-  const students = JSON.parse(localStorage.getItem("students")) || [];
-  const modules = JSON.parse(localStorage.getItem("modules")) || [];
-  const progress = JSON.parse(localStorage.getItem("progress")) || {};
+  const [students, setStudents] = useState([]);
+  const scores = JSON.parse(localStorage.getItem("scores")) || {};
 
   const [search, setSearch] = useState("");
 
-  const filteredStudents = students.filter((s) =>
-    s.name?.toLowerCase().includes(search.toLowerCase())
+  useEffect(() => {
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    setStudents(users.filter((u) => u.role === "student"));
+  }, []);
+
+  const filtered = students.filter((s) =>
+    s.username.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
@@ -18,29 +22,31 @@ export default function ViewReports() {
       <NavBar role="manager" />
 
       <div className="page">
-        <h1>Detailed Reports</h1>
+        <h1>📊 Student Reports</h1>
 
         <div className="card">
-          <label>Search Student</label>
           <input
-            placeholder="Enter student name"
+            placeholder="Search student..."
             onChange={(e) => setSearch(e.target.value)}
           />
         </div>
 
         <div className="card-grid">
-          {filteredStudents.length === 0 ? (
-            <p>No student records found</p>
-          ) : (
-            filteredStudents.map((student, index) => (
-              <div key={index} className="card">
-                <h3>{student.name}</h3>
-                <p>Email: {student.email}</p>
-                <p>Courses Enrolled: {modules.length}</p>
-                <p>Progress Entries: {Object.keys(progress).length}</p>
-              </div>
-            ))
-          )}
+          {filtered.map((s) => (
+            <div className="card" key={s.username}>
+              <h3>{s.username}</h3>
+
+              {Object.keys(scores).length === 0 ? (
+                <p>No test data</p>
+              ) : (
+                Object.entries(scores).map(([mod, score]) => (
+                  <p key={mod}>
+                    📘 {mod}: {score}%
+                  </p>
+                ))
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </>

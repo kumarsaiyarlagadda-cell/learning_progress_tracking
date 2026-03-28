@@ -1,23 +1,23 @@
-.login-container {
-  height: 100vh;
+.register-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
   background: linear-gradient(135deg, #667eea, #764ba2, #ff758c);
 }
 
-.login-card {
-  width: 350px;
+.register-card {
+  width: 340px;
   padding: 30px;
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(12px);
   border-radius: 12px;
   text-align: center;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
   color: white;
 }
 
-.login-card input,
-.login-card select {
+.register-card input,
+.register-card select {
   width: 100%;
   padding: 10px;
   margin-top: 12px;
@@ -26,13 +26,12 @@
   background: rgba(255,255,255,0.2);
 }
 
-.login-card button {
-  width: 100%;
-  margin-top: 18px;
+.register-card button {
+  margin-top: 15px;
   padding: 10px;
-  border: none;
-  border-radius: 8px;
+  width: 100%;
   background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  border: none;
   color: white;
   font-weight: bold;
 }

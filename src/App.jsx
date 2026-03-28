@@ -21,9 +21,12 @@ import DeleteModule from "./admin/DeleteModule";
 import ManagerDashboard from "./manager/ManagerDashboard";
 import ViewReports from "./manager/ViewReports";
 import Analytics from "./manager/Analytics";
+import AddTest from "./manager/AddTest";
+import ManageStudents from "./manager/ManageStudents";
 
 function App() {
   return (
+    
     <BrowserRouter>
       <Routes>
 
@@ -48,12 +51,16 @@ function App() {
         <Route path="/manager" element={<ManagerDashboard />} />
         <Route path="/manager/reports" element={<ViewReports />} />
         <Route path="/manager/analytics" element={<Analytics />} />
+        <Route path="/manager/add-test" element={<AddTest />} />
+<Route path="/manager/students" element={<ManageStudents />} />
+<Route path="/manager/test" element={<TakeTest />} />
 
         {/* 404 */}
         <Route path="*" element={<NotFound />} />
 
       </Routes>
     </BrowserRouter>
+    
   );
 }
 
