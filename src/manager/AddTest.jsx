@@ -38,8 +38,6 @@ export default function AddTest() {
         answer: "Software"
       }
     ];
-
-    // ✅ Store per module
     localStorage.setItem(
       `test_${moduleName}`,
       JSON.stringify(questions)

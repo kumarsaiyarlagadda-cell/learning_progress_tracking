@@ -37,8 +37,6 @@ export default function ManagerDashboard() {
               <button className="btn">Open Modules</button>
             </Link>
           </div>
-
-          {/* ✅ NEW */}
           <div className="card">
             <h3>Generate Test</h3>
             <Link to="/manager/add-test">
