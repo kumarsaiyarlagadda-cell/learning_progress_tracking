@@ -72,7 +72,7 @@ export default function TakeTest() {
       <NavBar role="student" />
 
       <div className="page">
-        <h1>🧪 Take Test</h1>
+        <h1>Take Test</h1>
 
         <div className="card">
           <label>Select Module</label>
@@ -120,7 +120,7 @@ export default function TakeTest() {
 
         {history.length > 0 && (
           <div className="card">
-            <h3>📜 Previous Attempts</h3>
+            <h3>Previous Attempts</h3>
             {history.map((s, i) => (
               <p key={i}>Attempt {i + 1}: {s}%</p>
             ))}

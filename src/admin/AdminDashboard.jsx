@@ -16,7 +16,7 @@ export default function AdminDashboard() {
       <NavBar role="admin" />
 
       <div className="page">
-        <h1>🛠 Admin Dashboard</h1>
+        <h1>Admin Dashboard</h1>
 
         <div className="card-grid">
           <div className="card">
@@ -31,7 +31,7 @@ export default function AdminDashboard() {
             </Link>
           </div>
           <div className="card">
-            <h3>👔 Manage Managers</h3>
+            <h3> Manage Managers</h3>
             <Link to="/admin/managers">
               <button className="btn">Open</button>
             </Link>

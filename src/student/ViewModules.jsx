@@ -21,7 +21,7 @@ export default function ViewModules() {
       <NavBar role="student" />
 
       <div className="page">
-        <h1>📚 Modules</h1>
+        <h1>Modules</h1>
 
         <div className="card">
           <input
@@ -33,7 +33,7 @@ export default function ViewModules() {
         <div className="card-grid">
           {filtered.map((mod) => (
             <div className="card" key={mod.id}>
-              <h3>📘 {mod.name}</h3>
+              <h3>{mod.name}</h3>
 
               <button
                 className="btn"

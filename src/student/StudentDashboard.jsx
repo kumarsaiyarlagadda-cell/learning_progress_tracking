@@ -24,21 +24,21 @@ export default function StudentDashboard() {
           </div>
 
           <div className="card">
-            <h3>📚 View Modules</h3>
+            <h3>View Modules</h3>
             <Link to="/student/modules">
               <button className="btn">Open Modules</button>
             </Link>
           </div>
 
           <div className="card">
-            <h3>📊 Track Progress</h3>
+            <h3>Track Progress</h3>
             <Link to="/student/progress">
               <button className="btn">View Progress</button>
             </Link>
           </div>
 
           <div className="card">
-            <h3>🧪 Take Test</h3>
+            <h3>Take Test</h3>
             <Link to="/student/test">
               <button className="btn">Start Test</button>
             </Link>
@@ -46,7 +46,7 @@ export default function StudentDashboard() {
 
           {/* NEW */}
           <div className="card">
-            <h3>🏆 Leaderboard</h3>
+            <h3>Leaderboard</h3>
             <Link to="/student/leaderboard">
               <button className="btn">View Leaderboard</button>
             </Link>

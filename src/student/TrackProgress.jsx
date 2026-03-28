@@ -15,7 +15,7 @@ export default function TrackProgress() {
       <NavBar role="student" />
 
       <div className="page">
-        <h1>📊 Your Progress</h1>
+        <h1>Your Progress</h1>
 
         <div className="card-grid">
           {Object.keys(scores).length === 0 ? (

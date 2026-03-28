@@ -28,7 +28,7 @@ export default function StudentModuleReader() {
       <NavBar role="student" />
 
       <div className="page">
-        <h1>📖 {module.name}</h1>
+        <h1>{module.name}</h1>
 
         <div className="card">
           <p style={{ lineHeight: "1.8", textAlign: "justify" }}>

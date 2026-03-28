@@ -22,7 +22,7 @@ export default function ViewReports() {
       <NavBar role="manager" />
 
       <div className="page">
-        <h1>📊 Student Reports</h1>
+        <h1>Student Reports</h1>
 
         <div className="card">
           <input
@@ -41,7 +41,7 @@ export default function ViewReports() {
               ) : (
                 Object.entries(scores).map(([mod, score]) => (
                   <p key={mod}>
-                    📘 {mod}: {score}%
+                     {mod}: {score}%
                   </p>
                 ))
               )}

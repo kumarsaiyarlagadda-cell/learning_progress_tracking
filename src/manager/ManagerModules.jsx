@@ -17,12 +17,12 @@ export default function ManagerModules() {
       <NavBar role="manager" />
 
       <div className="page">
-        <h1>📚 Module Library</h1>
+        <h1>Module Library</h1>
 
         <div className="card-grid">
           {modules.map((mod) => (
             <div key={mod.id} className="card">
-              <h3>📘 {mod.name}</h3>
+              <h3>{mod.name}</h3>
 
               <button
                 className="btn"

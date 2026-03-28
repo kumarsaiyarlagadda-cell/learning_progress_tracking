@@ -35,7 +35,7 @@ export default function ManageManagers() {
       <NavBar role="admin" />
 
       <div className="page">
-        <h1>👔 Manage Managers</h1>
+        <h1>Manage Managers</h1>
 
         <div className="card-grid">
           {managers.map((m) => (

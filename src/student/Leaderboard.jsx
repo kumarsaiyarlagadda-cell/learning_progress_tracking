@@ -16,14 +16,14 @@ export default function Leaderboard() {
       <NavBar role="student" />
 
       <div className="page">
-        <h1>🏆 Leaderboard</h1>
+        <h1>Leaderboard</h1>
 
         <div className="card-grid">
           {sorted.map(([mod, score], index) => (
             <div className="card" key={mod}>
               <h3>{mod}</h3>
               <p>Score: {score}%</p>
-              {index === 0 && <p>🥇 Top Performer</p>}
+              {index === 0 && <p> Top Performer</p>}
             </div>
           ))}
         </div>

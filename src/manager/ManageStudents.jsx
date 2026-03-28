@@ -34,11 +34,11 @@ export default function ManageStudents() {
       <NavBar role="manager" />
 
       <div className="page">
-        <h1>👨‍🎓 Manage Students</h1>
+        <h1>Manage Students</h1>
 
         <div className="card-grid">
           {students.length === 0 ? (
-            <p>📭 No students found</p>
+            <p>No students found</p>
           ) : (
             students.map((s) => (
               <div className="card" key={s.username}>

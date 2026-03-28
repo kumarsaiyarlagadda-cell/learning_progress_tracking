@@ -32,7 +32,7 @@ export default function ModuleReader() {
       <NavBar role="manager" />
 
       <div className="page">
-        <h1>📖 {module.name}</h1>
+        <h1>{module.name}</h1>
 
         {chapters.map((ch, index) => (
           <div key={index} className="card">
