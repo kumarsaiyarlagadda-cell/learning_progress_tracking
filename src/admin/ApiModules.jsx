@@ -56,7 +56,7 @@ export default function ApiModules() {
       <NavBar role="admin" />
 
       <div className="page">
-        <h1>🎓 Smart Module Generator</h1>
+        <h1>Smart Module Generator</h1>
 
         <div className="card">
           <input

@@ -13,16 +13,10 @@ export default function Login() {
       alert("Please fill all fields");
       return;
     }
-
-    // ✅ Default Admin Credentials
-    if (
-      role === "admin" &&
-      username === "admin" &&
-      password === "admin"
-    ) {
+    if (role === "admin" && username === "admin" && password === "admin123") {
       localStorage.setItem(
         "loggedInUser",
-        JSON.stringify({ username, role })
+        JSON.stringify({ username: "admin", role: "admin" })
       );
       navigate("/admin");
       return;
@@ -38,7 +32,6 @@ export default function Login() {
     );
 
     if (validUser) {
-      // ✅ Save logged-in user
       localStorage.setItem(
         "loggedInUser",
         JSON.stringify({

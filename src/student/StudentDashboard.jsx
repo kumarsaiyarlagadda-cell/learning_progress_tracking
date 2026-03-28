@@ -11,7 +11,7 @@ export default function StudentDashboard() {
       <NavBar role="student" />
 
       <div className="page">
-        <h1>🎓 Student Dashboard</h1>
+        <h1>Student Dashboard</h1>
 
         <div className="card-grid">
 

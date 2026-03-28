@@ -56,7 +56,7 @@ export default function ViewModules() {
           ))}
         </div>
 
-        {/* Pagination */}
+
         <div style={{ marginTop: "20px", textAlign: "center" }}>
           <button
             className="btn"

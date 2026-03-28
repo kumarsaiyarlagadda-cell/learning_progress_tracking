@@ -6,11 +6,31 @@ export default function Register() {
 
   const [role, setRole] = useState("");
   const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
+  const isValidEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  
+  const isValidPhone = (phone) => {
+    return /^[0-9]{10}$/.test(phone);
+  };
 
   const handleRegister = () => {
-    if (!role || !username || !password) {
+    if (!role || !username || !email || !phone || !password) {
       alert("Please fill all fields");
+      return;
+    }
+
+    if (!isValidEmail(email)) {
+      alert("Invalid Email Format");
+      return;
+    }
+
+    if (!isValidPhone(phone)) {
+      alert("Phone number must be 10 digits");
       return;
     }
 
@@ -23,7 +43,13 @@ export default function Register() {
       return;
     }
 
-    users.push({ role, username, password });
+    users.push({
+      role,
+      username,
+      email,
+      phone,
+      password,
+    });
 
     localStorage.setItem("users", JSON.stringify(users));
 
@@ -44,14 +70,28 @@ export default function Register() {
 
         <input
           type="text"
-          placeholder="Create Username"
+          placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
 
         <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+
+        <input
+          type="text"
+          placeholder="Phone Number"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+        />
+
+        <input
           type="password"
-          placeholder="Create Password"
+          placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
